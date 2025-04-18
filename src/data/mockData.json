@@ -1,0 +1,887 @@
+{
+  "provinces": [
+    { "id": 1, "name": "Hà Nội" },
+    { "id": 2, "name": "Hồ Chí Minh" },
+    { "id": 3, "name": "Đà Nẵng" },
+    { "id": 4, "name": "Hải Phòng" },
+    { "id": 5, "name": "Nghệ An" },
+    { "id": 6, "name": "Thanh Hóa" },
+    { "id": 7, "name": "Hà Tĩnh" },
+    { "id": 8, "name": "Quảng Bình" },
+    { "id": 9, "name": "Quảng Trị" },
+    { "id": 10, "name": "Thừa Thiên Huế" },
+    { "id": 11, "name": "Bình Định" },
+    { "id": 12, "name": "Khánh Hòa" },
+    { "id": 13, "name": "Ninh Thuận" },
+    { "id": 14, "name": "Bình Thuận" },
+    { "id": 15, "name": "Gia Lai" },
+    { "id": 16, "name": "Kon Tum" },
+    { "id": 17, "name": "Đắk Lắk" },
+    { "id": 18, "name": "Đắk Nông" },
+    { "id": 19, "name": "Lâm Đồng" },
+    { "id": 20, "name": "Tây Ninh" },
+    { "id": 21, "name": "Bình Dương" },
+    { "id": 22, "name": "Đồng Nai" },
+    { "id": 23, "name": "Bà Rịa - Vũng Tàu" },
+    { "id": 24, "name": "Long An" },
+    { "id": 25, "name": "Tiền Giang" },
+    { "id": 26, "name": "Bến Tre" },
+    { "id": 27, "name": "Trà Vinh" },
+    { "id": 28, "name": "Vĩnh Long" },
+    { "id": 29, "name": "Đồng Tháp" },
+    { "id": 30, "name": "An Giang" },
+    { "id": 31, "name": "Kiên Giang" },
+    { "id": 32, "name": "Cà Mau" },
+    { "id": 33, "name": "Hậu Giang" },
+    { "id": 34, "name": "Sóc Trăng" },
+    { "id": 35, "name": "Bạc Liêu" },
+    { "id": 36, "name": "Cần Thơ" },
+    { "id": 37, "name": "Nam Định" },
+    { "id": 38, "name": "Thái Bình" },
+    { "id": 39, "name": "Hưng Yên" },
+    { "id": 40, "name": "Hải Dương" },
+    { "id": 41, "name": "Ninh Bình" },
+    { "id": 42, "name": "Vĩnh Phúc" },
+    { "id": 43, "name": "Phú Thọ" },
+    { "id": 44, "name": "Tuyên Quang" },
+    { "id": 45, "name": "Yên Bái" },
+    { "id": 46, "name": "Sơn La" },
+    { "id": 47, "name": "Điện Biên" },
+    { "id": 48, "name": "Lai Châu" },
+    { "id": 49, "name": "Lào Cai" },
+    { "id": 50, "name": "Hà Giang" },
+    { "id": 51, "name": "Cao Bằng" },
+    { "id": 52, "name": "Bắc Kạn" },
+    { "id": 53, "name": "Thái Nguyên" },
+    { "id": 54, "name": "Lạng Sơn" },
+    { "id": 55, "name": "Quảng Ninh" },
+    { "id": 56, "name": "Bắc Ninh" },
+    { "id": 57, "name": "Hà Nam" },
+    { "id": 58, "name": "Nam Định" },
+    { "id": 59, "name": "Ninh Bình" },
+    { "id": 60, "name": "Thái Bình" },
+    { "id": 61, "name": "Hưng Yên" },
+    { "id": 62, "name": "Hà Giang" },
+    { "id": 63, "name": "Hà Giang" }
+  ],
+  "dailyReports": [
+    { "provinceID": 1, "casesInfected": 500000, "casesDeaths": 1000, "casesRecovered": 490000 },
+    { "provinceID": 2, "casesInfected": 1657900, "casesDeaths": 1200, "casesRecovered": 1600000 },
+    { "provinceID": 3, "casesInfected": 300000, "casesDeaths": 500, "casesRecovered": 295000 },
+    { "provinceID": 4, "casesInfected": 100000, "casesDeaths": 200, "casesRecovered": 98000 },
+    { "provinceID": 5, "casesInfected": 0, "casesDeaths": 0, "casesRecovered": 0 },
+    { "provinceID": 6, "casesInfected": 150000, "casesDeaths": 300, "casesRecovered": 147000 },
+    { "provinceID": 7, "casesInfected": 20000, "casesDeaths": 50, "casesRecovered": 19800 },
+    { "provinceID": 8, "casesInfected": 80000, "casesDeaths": 100, "casesRecovered": 79000 },
+    { "provinceID": 9, "casesInfected": 120000, "casesDeaths": 150, "casesRecovered": 118000 },
+    { "provinceID": 10, "casesInfected": 60000, "casesDeaths": 80, "casesRecovered": 59000 },
+    { "provinceID": 11, "casesInfected": 75000, "casesDeaths": 90, "casesRecovered": 74000 },
+    { "provinceID": 12, "casesInfected": 30000, "casesDeaths": 40, "casesRecovered": 29000 },
+    { "provinceID": 13, "casesInfected": 20000, "casesDeaths": 10, "casesRecovered": 19900 },
+    { "provinceID": 14, "casesInfected": 50000, "casesDeaths": 20, "casesRecovered": 48000 },
+    { "provinceID": 15, "casesInfected": 80000, "casesDeaths": 50, "casesRecovered": 79000 },
+    { "provinceID": 16, "casesInfected": 20000, "casesDeaths": 5, "casesRecovered": 19500 },
+    { "provinceID": 17, "casesInfected": 60000, "casesDeaths": 70, "casesRecovered": 59000 },
+    { "provinceID": 18, "casesInfected": 40000, "casesDeaths": 30, "casesRecovered": 39000 },
+    { "provinceID": 19, "casesInfected": 50000, "casesDeaths": 10, "casesRecovered": 49000 },
+    { "provinceID": 20, "casesInfected": 10000, "casesDeaths": 0, "casesRecovered": 10000 },
+    { "provinceID": 21, "casesInfected": 90000, "casesDeaths": 120, "casesRecovered": 89000 },
+    { "provinceID": 22, "casesInfected": 30000, "casesDeaths": 40, "casesRecovered": 29000 },
+    { "provinceID": 23, "casesInfected": 50000, "casesDeaths": 60, "casesRecovered": 49000 },
+    { "provinceID": 24, "casesInfected": 25000, "casesDeaths": 20, "casesRecovered": 24000 },
+    { "provinceID": 25, "casesInfected": 20000, "casesDeaths": 10, "casesRecovered": 19800 },
+    { "provinceID": 26, "casesInfected": 15000, "casesDeaths": 5, "casesRecovered": 14900 },
+    { "provinceID": 27, "casesInfected": 30000, "casesDeaths": 20, "casesRecovered": 29000 },
+    { "provinceID": 28, "casesInfected": 50000, "casesDeaths": 50, "casesRecovered": 49000 },
+    { "provinceID": 29, "casesInfected": 40000, "casesDeaths": 30, "casesRecovered": 39000 },
+    { "provinceID": 30, "casesInfected": 25000, "casesDeaths": 15, "casesRecovered": 24500 },
+    { "provinceID": 31, "casesInfected": 60000, "casesDeaths": 60, "casesRecovered": 59000 },
+    { "provinceID": 32, "casesInfected": 20000, "casesDeaths": 20, "casesRecovered": 19800 },
+    { "provinceID": 33, "casesInfected": 90000, "casesDeaths": 100, "casesRecovered": 89000 },
+    { "provinceID": 34, "casesInfected": 40000, "casesDeaths": 40, "casesRecovered": 39000 },
+    { "provinceID": 35, "casesInfected": 10000, "casesDeaths": 5, "casesRecovered": 9900 },
+    { "provinceID": 36, "casesInfected": 25000, "casesDeaths": 15, "casesRecovered": 24000 },
+    { "provinceID": 37, "casesInfected": 5000, "casesDeaths": 2, "casesRecovered": 4900 },
+    { "provinceID": 38, "casesInfected": 30000, "casesDeaths": 25, "casesRecovered": 29000 },
+    { "provinceID": 39, "casesInfected": 70000, "casesDeaths": 80, "casesRecovered": 69000 },
+    { "provinceID": 40, "casesInfected": 150000, "casesDeaths": 300, "casesRecovered": 147000 },
+    { "provinceID": 41, "casesInfected": 60000, "casesDeaths": 50, "casesRecovered": 59000 },
+    { "provinceID": 42, "casesInfected": 45000, "casesDeaths": 30, "casesRecovered": 44000 },
+    { "provinceID": 43, "casesInfected": 20000, "casesDeaths": 10, "casesRecovered": 19800 },
+    { "provinceID": 44, "casesInfected": 15000, "casesDeaths": 5, "casesRecovered": 14900 },
+    { "provinceID": 45, "casesInfected": 10000, "casesDeaths": 0, "casesRecovered": 10000 },
+    { "provinceID": 46, "casesInfected": 30000, "casesDeaths": 20, "casesRecovered": 29000 },
+    { "provinceID": 47, "casesInfected": 25000, "casesDeaths": 15, "casesRecovered": 24000 },
+    { "provinceID": 48, "casesInfected": 18000, "casesDeaths": 10, "casesRecovered": 17900 },
+    { "provinceID": 49, "casesInfected": 9000, "casesDeaths": 5, "casesRecovered": 8900 },
+    { "provinceID": 50, "casesInfected": 12000, "casesDeaths": 5, "casesRecovered": 11900 },
+    { "provinceID": 51, "casesInfected": 5000, "casesDeaths": 1, "casesRecovered": 4900 },
+    { "provinceID": 52, "casesInfected": 20000, "casesDeaths": 20, "casesRecovered": 19800 },
+    { "provinceID": 53, "casesInfected": 30000, "casesDeaths": 30, "casesRecovered": 29000 },
+    { "provinceID": 54, "casesInfected": 15000, "casesDeaths": 10, "casesRecovered": 14900 },
+    { "provinceID": 55, "casesInfected": 40000, "casesDeaths": 40, "casesRecovered": 39000 },
+    { "provinceID": 56, "casesInfected": 60000, "casesDeaths": 50, "casesRecovered": 59000 },
+    { "provinceID": 57, "casesInfected": 25000, "casesDeaths": 20, "casesRecovered": 24000 },
+    { "provinceID": 58, "casesInfected": 20000, "casesDeaths": 10, "casesRecovered": 19800 },
+    { "provinceID": 59, "casesInfected": 30000, "casesDeaths": 30, "casesRecovered": 29000 },
+    { "provinceID": 60, "casesInfected": 15000, "casesDeaths": 10, "casesRecovered": 14900 },
+    { "provinceID": 61, "casesInfected": 40000, "casesDeaths": 40, "casesRecovered": 39000 },
+    { "provinceID": 62, "casesInfected": 20000, "casesDeaths": 20, "casesRecovered": 19800 },
+    { "provinceID": 63, "casesInfected": 5000, "casesDeaths": 2, "casesRecovered": 4900 }
+  ],
+  "detailReports": [
+    {
+      "provinceID": 1,
+      "data": [
+        { "date": "2023-04-01", "number": 5000 },
+        { "date": "2023-04-02", "number": 6000 },
+        { "date": "2023-04-03", "number": 5500 },
+        { "date": "2023-04-04", "number": 7000 },
+        { "date": "2023-04-05", "number": 6500 },
+        { "date": "2023-04-06", "number": 8000 },
+        { "date": "2023-04-07", "number": 7200 }
+      ]
+    },
+    {
+      "provinceID": 2,
+      "data": [
+        { "date": "2023-04-01", "number": 7000 },
+        { "date": "2023-04-02", "number": 8000 },
+        { "date": "2023-04-03", "number": 7500 },
+        { "date": "2023-04-04", "number": 9000 },
+        { "date": "2023-04-05", "number": 8500 },
+        { "date": "2023-04-06", "number": 9500 },
+        { "date": "2023-04-07", "number": 9000 }
+      ]
+    },
+    {
+      "provinceID": 3,
+      "data": [
+        { "date": "2023-04-01", "number": 3000 },
+        { "date": "2023-04-02", "number": 3500 },
+        { "date": "2023-04-03", "number": 4000 },
+        { "date": "2023-04-04", "number": 4500 },
+        { "date": "2023-04-05", "number": 5000 },
+        { "date": "2023-04-06", "number": 5500 },
+        { "date": "2023-04-07", "number": 6000 }
+      ]
+    },
+    {
+      "provinceID": 4,
+      "data": [
+        { "date": "2023-04-01", "number": 2500 },
+        { "date": "2023-04-02", "number": 3000 },
+        { "date": "2023-04-03", "number": 3500 },
+        { "date": "2023-04-04", "number": 4000 },
+        { "date": "2023-04-05", "number": 4500 },
+        { "date": "2023-04-06", "number": 4800 },
+        { "date": "2023-04-07", "number": 5000 }
+      ]
+    },
+    {
+      "provinceID": 5,
+      "data": [
+        { "date": "2023-04-01", "number": 0 },
+        { "date": "2023-04-02", "number": 0 },
+        { "date": "2023-04-03", "number": 0 },
+        { "date": "2023-04-04", "number": 0 },
+        { "date": "2023-04-05", "number": 0 },
+        { "date": "2023-04-06", "number": 0 },
+        { "date": "2023-04-07", "number": 0 }
+      ]
+    },
+    {
+      "provinceID": 6,
+      "data": [
+        { "date": "2023-04-01", "number": 2000 },
+        { "date": "2023-04-02", "number": 2500 },
+        { "date": "2023-04-03", "number": 3000 },
+        { "date": "2023-04-04", "number": 3500 },
+        { "date": "2023-04-05", "number": 4000 },
+        { "date": "2023-04-06", "number": 4500 },
+        { "date": "2023-04-07", "number": 4800 }
+      ]
+    },
+    {
+      "provinceID": 7,
+      "data": [
+        { "date": "2023-04-01", "number": 1500 },
+        { "date": "2023-04-02", "number": 1600 },
+        { "date": "2023-04-03", "number": 1700 },
+        { "date": "2023-04-04", "number": 1800 },
+        { "date": "2023-04-05", "number": 1900 },
+        { "date": "2023-04-06", "number": 2000 },
+        { "date": "2023-04-07", "number": 2100 }
+      ]
+    },
+    {
+      "provinceID": 8,
+      "data": [
+        { "date": "2023-04-01", "number": 2200 },
+        { "date": "2023-04-02", "number": 2300 },
+        { "date": "2023-04-03", "number": 2400 },
+        { "date": "2023-04-04", "number": 2500 },
+        { "date": "2023-04-05", "number": 2600 },
+        { "date": "2023-04-06", "number": 2700 },
+        { "date": "2023-04-07", "number": 2800 }
+      ]
+    },
+    {
+      "provinceID": 9,
+      "data": [
+        { "date": "2023-04-01", "number": 1800 },
+        { "date": "2023-04-02", "number": 1900 },
+        { "date": "2023-04-03", "number": 2000 },
+        { "date": "2023-04-04", "number": 2100 },
+        { "date": "2023-04-05", "number": 2200 },
+        { "date": "2023-04-06", "number": 2300 },
+        { "date": "2023-04-07", "number": 2400 }
+      ]
+    },
+    {
+      "provinceID": 10,
+      "data": [
+        { "date": "2023-04-01", "number": 2700 },
+        { "date": "2023-04-02", "number": 2800 },
+        { "date": "2023-04-03", "number": 2900 },
+        { "date": "2023-04-04", "number": 3000 },
+        { "date": "2023-04-05", "number": 3100 },
+        { "date": "2023-04-06", "number": 3200 },
+        { "date": "2023-04-07", "number": 3300 }
+      ]
+    },
+    {
+      "provinceID": 11,
+      "data": [
+        { "date": "2023-04-01", "number": 3200 },
+        { "date": "2023-04-02", "number": 3300 },
+        { "date": "2023-04-03", "number": 3400 },
+        { "date": "2023-04-04", "number": 3500 },
+        { "date": "2023-04-05", "number": 3600 },
+        { "date": "2023-04-06", "number": 3700 },
+        { "date": "2023-04-07", "number": 3800 }
+      ]
+    },
+    {
+      "provinceID": 12,
+      "data": [
+        { "date": "2023-04-01", "number": 1500 },
+        { "date": "2023-04-02", "number": 1600 },
+        { "date": "2023-04-03", "number": 1700 },
+        { "date": "2023-04-04", "number": 1800 },
+        { "date": "2023-04-05", "number": 1900 },
+        { "date": "2023-04-06", "number": 2000 },
+        { "date": "2023-04-07", "number": 2100 }
+      ]
+    },
+    {
+      "provinceID": 13,
+      "data": [
+        { "date": "2023-04-01", "number": 1100 },
+        { "date": "2023-04-02", "number": 1200 },
+        { "date": "2023-04-03", "number": 1300 },
+        { "date": "2023-04-04", "number": 1400 },
+        { "date": "2023-04-05", "number": 1500 },
+        { "date": "2023-04-06", "number": 1600 },
+        { "date": "2023-04-07", "number": 1700 }
+      ]
+    },
+    {
+      "provinceID": 14,
+      "data": [
+        { "date": "2023-04-01", "number": 800 },
+        { "date": "2023-04-02", "number": 900 },
+        { "date": "2023-04-03", "number": 1000 },
+        { "date": "2023-04-04", "number": 1100 },
+        { "date": "2023-04-05", "number": 1200 },
+        { "date": "2023-04-06", "number": 1300 },
+        { "date": "2023-04-07", "number": 1400 }
+      ]
+    },
+    {
+      "provinceID": 15,
+      "data": [
+        { "date": "2023-04-01", "number": 2000 },
+        { "date": "2023-04-02", "number": 2500 },
+        { "date": "2023-04-03", "number": 3000 },
+        { "date": "2023-04-04", "number": 3500 },
+        { "date": "2023-04-05", "number": 4000 },
+        { "date": "2023-04-06", "number": 4500 },
+        { "date": "2023-04-07", "number": 4800 }
+      ]
+    },
+    {
+      "provinceID": 16,
+      "data": [
+        { "date": "2023-04-01", "number": 1800 },
+        { "date": "2023-04-02", "number": 1900 },
+        { "date": "2023-04-03", "number": 2000 },
+        { "date": "2023-04-04", "number": 2100 },
+        { "date": "2023-04-05", "number": 2200 },
+        { "date": "2023-04-06", "number": 2300 },
+        { "date": "2023-04-07", "number": 2400 }
+      ]
+    },
+    {
+      "provinceID": 17,
+      "data": [
+        { "date": "2023-04-01", "number": 2600 },
+        { "date": "2023-04-02", "number": 2700 },
+        { "date": "2023-04-03", "number": 2800 },
+        { "date": "2023-04-04", "number": 2900 },
+        { "date": "2023-04-05", "number": 3000 },
+        { "date": "2023-04-06", "number": 3100 },
+        { "date": "2023-04-07", "number": 3200 }
+      ]
+    },
+    {
+      "provinceID": 18,
+      "data": [
+        { "date": "2023-04-01", "number": 1500 },
+        { "date": "2023-04-02", "number": 1600 },
+        { "date": "2023-04-03", "number": 1700 },
+        { "date": "2023-04-04", "number": 1800 },
+        { "date": "2023-04-05", "number": 1900 },
+        { "date": "2023-04-06", "number": 2000 },
+        { "date": "2023-04-07", "number": 2100 }
+      ]
+    },
+    {
+      "provinceID": 19,
+      "data": [
+        { "date": "2023-04-01", "number": 700 },
+        { "date": "2023-04-02", "number": 800 },
+        { "date": "2023-04-03", "number": 900 },
+        { "date": "2023-04-04", "number": 1000 },
+        { "date": "2023-04-05", "number": 1100 },
+        { "date": "2023-04-06", "number": 1200 },
+        { "date": "2023-04-07", "number": 1300 }
+      ]
+    },
+    {
+      "provinceID": 20,
+      "data": [
+        { "date": "2023-04-01", "number": 300 },
+        { "date": "2023-04-02", "number": 400 },
+        { "date": "2023-04-03", "number": 500 },
+        { "date": "2023-04-04", "number": 600 },
+        { "date": "2023-04-05", "number": 700 },
+        { "date": "2023-04-06", "number": 800 },
+        { "date": "2023-04-07", "number": 900 }
+      ]
+    },
+    {
+      "provinceID": 21,
+      "data": [
+        { "date": "2023-04-01", "number": 4000 },
+        { "date": "2023-04-02", "number": 4500 },
+        { "date": "2023-04-03", "number": 5000 },
+        { "date": "2023-04-04", "number": 5500 },
+        { "date": "2023-04-05", "number": 6000 },
+        { "date": "2023-04-06", "number": 6500 },
+        { "date": "2023-04-07", "number": 7000 }
+      ]
+    },
+    {
+      "provinceID": 22,
+      "data": [
+        { "date": "2023-04-01", "number": 2900 },
+        { "date": "2023-04-02", "number": 3000 },
+        { "date": "2023-04-03", "number": 3100 },
+        { "date": "2023-04-04", "number": 3200 },
+        { "date": "2023-04-05", "number": 3300 },
+        { "date": "2023-04-06", "number": 3400 },
+        { "date": "2023-04-07", "number": 3500 }
+      ]
+    },
+    {
+      "provinceID": 23,
+      "data": [
+        { "date": "2023-04-01", "number": 2200 },
+        { "date": "2023-04-02", "number": 2300 },
+        { "date": "2023-04-03", "number": 2400 },
+        { "date": "2023-04-04", "number": 2500 },
+        { "date": "2023-04-05", "number": 2600 },
+        { "date": "2023-04-06", "number": 2700 },
+        { "date": "2023-04-07", "number": 2800 }
+      ]
+    },
+    {
+      "provinceID": 24,
+      "data": [
+        { "date": "2023-04-01", "number": 2000 },
+        { "date": "2023-04-02", "number": 2100 },
+        { "date": "2023-04-03", "number": 2200 },
+        { "date": "2023-04-04", "number": 2300 },
+        { "date": "2023-04-05", "number": 2400 },
+        { "date": "2023-04-06", "number": 2500 },
+        { "date": "2023-04-07", "number": 2600 }
+      ]
+    },
+    {
+      "provinceID": 25,
+      "data": [
+        { "date": "2023-04-01", "number": 500 },
+        { "date": "2023-04-02", "number": 600 },
+        { "date": "2023-04-03", "number": 700 },
+        { "date": "2023-04-04", "number": 800 },
+        { "date": "2023-04-05", "number": 900 },
+        { "date": "2023-04-06", "number": 1000 },
+        { "date": "2023-04-07", "number": 1100 }
+      ]
+    },{
+      "provinceID": 26,
+      "data": [
+        { "date": "2023-04-01", "number": 1000 },
+        { "date": "2023-04-02", "number": 1100 },
+        { "date": "2023-04-03", "number": 1200 },
+        { "date": "2023-04-04", "number": 1300 },
+        { "date": "2023-04-05", "number": 1400 },
+        { "date": "2023-04-06", "number": 1500 },
+        { "date": "2023-04-07", "number": 1600 }
+      ]
+    },
+    {
+      "provinceID": 27,
+      "data": [
+        { "date": "2023-04-01", "number": 1500 },
+        { "date": "2023-04-02", "number": 1600 },
+        { "date": "2023-04-03", "number": 1700 },
+        { "date": "2023-04-04", "number": 1800 },
+        { "date": "2023-04-05", "number": 1900 },
+        { "date": "2023-04-06", "number": 2000 },
+        { "date": "2023-04-07", "number": 2100 }
+      ]
+    },
+    {
+      "provinceID": 28,
+      "data": [
+        { "date": "2023-04-01", "number": 2000 },
+        { "date": "2023-04-02", "number": 2100 },
+        { "date": "2023-04-03", "number": 2200 },
+        { "date": "2023-04-04", "number": 2300 },
+        { "date": "2023-04-05", "number": 2400 },
+        { "date": "2023-04-06", "number": 2500 },
+        { "date": "2023-04-07", "number": 2600 }
+      ]
+    },
+    {
+      "provinceID": 29,
+      "data": [
+        { "date": "2023-04-01", "number": 3000 },
+        { "date": "2023-04-02", "number": 3100 },
+        { "date": "2023-04-03", "number": 3200 },
+        { "date": "2023-04-04", "number": 3300 },
+        { "date": "2023-04-05", "number": 3400 },
+        { "date": "2023-04-06", "number": 3500 },
+        { "date": "2023-04-07", "number": 3600 }
+      ]
+    },
+    {
+      "provinceID": 30,
+      "data": [
+        { "date": "2023-04-01", "number": 4000 },
+        { "date": "2023-04-02", "number": 4100 },
+        { "date": "2023-04-03", "number": 4200 },
+        { "date": "2023-04-04", "number": 4300 },
+        { "date": "2023-04-05", "number": 4400 },
+        { "date": "2023-04-06", "number": 4500 },
+        { "date": "2023-04-07", "number": 4600 }
+      ]
+    },
+    {
+      "provinceID": 31,
+      "data": [
+        { "date": "2023-04-01", "number": 5000 },
+        { "date": "2023-04-02", "number": 5100 },
+        { "date": "2023-04-03", "number": 5200 },
+        { "date": "2023-04-04", "number": 5300 },
+        { "date": "2023-04-05", "number": 5400 },
+        { "date": "2023-04-06", "number": 5500 },
+        { "date": "2023-04-07", "number": 5600 }
+      ]
+    },
+    {
+      "provinceID": 32,
+      "data": [
+        { "date": "2023-04-01", "number": 6000 },
+        { "date": "2023-04-02", "number": 6100 },
+        { "date": "2023-04-03", "number": 6200 },
+        { "date": "2023-04-04", "number": 6300 },
+        { "date": "2023-04-05", "number": 6400 },
+        { "date": "2023-04-06", "number": 6500 },
+        { "date": "2023-04-07", "number": 6600 }
+      ]
+    },
+    {
+      "provinceID": 33,
+      "data": [
+        { "date": "2023-04-01", "number": 7000 },
+        { "date": "2023-04-02", "number": 7100 },
+        { "date": "2023-04-03", "number": 7200 },
+        { "date": "2023-04-04", "number": 7300 },
+        { "date": "2023-04-05", "number": 7400 },
+        { "date": "2023-04-06", "number": 7500 },
+        { "date": "2023-04-07", "number": 7600 }
+      ]
+    },
+    {
+      "provinceID": 34,
+      "data": [
+        { "date": "2023-04-01", "number": 8000 },
+        { "date": "2023-04-02", "number": 8100 },
+        { "date": "2023-04-03", "number": 8200 },
+        { "date": "2023-04-04", "number": 8300 },
+        { "date": "2023-04-05", "number": 8400 },
+        { "date": "2023-04-06", "number": 8500 },
+        { "date": "2023-04-07", "number": 8600 }
+      ]
+    },
+    {
+      "provinceID": 35,
+      "data": [
+        { "date": "2023-04-01", "number": 9000 },
+        { "date": "2023-04-02", "number": 9100 },
+        { "date": "2023-04-03", "number": 9200 },
+        { "date": "2023-04-04", "number": 9300 },
+        { "date": "2023-04-05", "number": 9400 },
+        { "date": "2023-04-06", "number": 9500 },
+        { "date": "2023-04-07", "number": 9600 }
+      ]
+    },
+    {
+      "provinceID": 36,
+      "data": [
+        { "date": "2023-04-01", "number": 2500 },
+        { "date": "2023-04-02", "number": 2600 },
+        { "date": "2023-04-03", "number": 2700 },
+        { "date": "2023-04-04", "number": 2800 },
+        { "date": "2023-04-05", "number": 2900 },
+        { "date": "2023-04-06", "number": 3000 },
+        { "date": "2023-04-07", "number": 3100 }
+      ]
+    },
+    {
+      "provinceID": 37,
+      "data": [
+        { "date": "2023-04-01", "number": 1400 },
+        { "date": "2023-04-02", "number": 1500 },
+        { "date": "2023-04-03", "number": 1600 },
+        { "date": "2023-04-04", "number": 1700 },
+        { "date": "2023-04-05", "number": 1800 },
+        { "date": "2023-04-06", "number": 1900 },
+        { "date": "2023-04-07", "number": 2000 }
+      ]
+    },
+    {
+      "provinceID": 38,
+      "data": [
+        { "date": "2023-04-01", "number": 1300 },
+        { "date": "2023-04-02", "number": 1400 },
+        { "date": "2023-04-03", "number": 1500 },
+        { "date": "2023-04-04", "number": 1600 },
+        { "date": "2023-04-05", "number": 1700 },
+        { "date": "2023-04-06", "number": 1800 },
+        { "date": "2023-04-07", "number": 1900 }
+      ]
+    },
+    {
+      "provinceID": 39,
+      "data": [
+        { "date": "2023-04-01", "number": 2000 },
+        { "date": "2023-04-02", "number": 2100 },
+        { "date": "2023-04-03", "number": 2200 },
+        { "date": "2023-04-04", "number": 2300 },
+        { "date": "2023-04-05", "number": 2400 },
+        { "date": "2023-04-06", "number": 2500 },
+        { "date": "2023-04-07", "number": 2600 }
+      ]
+    },
+    {
+      "provinceID": 40,
+      "data": [
+        { "date": "2023-04-01", "number": 3000 },
+        { "date": "2023-04-02", "number": 3100 },
+        { "date": "2023-04-03", "number": 3200 },
+        { "date": "2023-04-04", "number": 3300 },
+        { "date": "2023-04-05", "number": 3400 },
+        { "date": "2023-04-06", "number": 3500 },
+        { "date": "2023-04-07", "number": 3600 }
+      ]
+    },
+    {
+      "provinceID": 41,
+      "data": [
+        { "date": "2023-04-01", "number": 5000 },
+        { "date": "2023-04-02", "number": 5100 },
+        { "date": "2023-04-03", "number": 5200 },
+        { "date": "2023-04-04", "number": 5300 },
+        { "date": "2023-04-05", "number": 5400 },
+        { "date": "2023-04-06", "number": 5500 },
+        { "date": "2023-04-07", "number": 5600 }
+      ]
+    },
+    {
+      "provinceID": 42,
+      "data": [
+        { "date": "2023-04-01", "number": 4000 },
+        { "date": "2023-04-02", "number": 4100 },
+        { "date": "2023-04-03", "number": 4200 },
+        { "date": "2023-04-04", "number": 4300 },
+        { "date": "2023-04-05", "number": 4400 },
+        { "date": "2023-04-06", "number": 4500 },
+        { "date": "2023-04-07", "number": 4600 }
+      ]
+    },
+    {
+      "provinceID": 43,
+      "data": [
+        { "date": "2023-04-01", "number": 3500 },
+        { "date": "2023-04-02", "number": 3600 },
+        { "date": "2023-04-03", "number": 3700 },
+        { "date": "2023-04-04", "number": 3800 },
+        { "date": "2023-04-05", "number": 3900 },
+        { "date": "2023-04-06", "number": 4000 },
+        { "date": "2023-04-07", "number": 4100 }
+      ]
+    },
+    {
+      "provinceID": 44,
+      "data": [
+        { "date": "2023-04-01", "number": 4500 },
+        { "date": "2023-04-02", "number": 4600 },
+        { "date": "2023-04-03", "number": 4700 },
+        { "date": "2023-04-04", "number": 4800 },
+        { "date": "2023-04-05", "number": 4900 },
+        { "date": "2023-04-06", "number": 5000 },
+        { "date": "2023-04-07", "number": 5100 }
+      ]
+    },
+    {
+      "provinceID": 45,
+      "data": [
+        { "date": "2023-04-01", "number": 2500 },
+        { "date": "2023-04-02", "number": 2600 },
+        { "date": "2023-04-03", "number": 2700 },
+        { "date": "2023-04-04", "number": 2800 },
+        { "date": "2023-04-05", "number": 2900 },
+        { "date": "2023-04-06", "number": 3000 },
+        { "date": "2023-04-07", "number": 3100 }
+      ]
+    },
+    {
+      "provinceID": 46,
+      "data": [
+        { "date": "2023-04-01", "number": 1700 },
+        { "date": "2023-04-02", "number": 1800 },
+        { "date": "2023-04-03", "number": 1900 },
+        { "date": "2023-04-04", "number": 2000 },
+        { "date": "2023-04-05", "number": 2100 },
+        { "date": "2023-04-06", "number": 2200 },
+        { "date": "2023-04-07", "number": 2300 }
+      ]
+    },
+    {
+      "provinceID": 47,
+      "data": [
+        { "date": "2023-04-01", "number": 1600 },
+        { "date": "2023-04-02", "number": 1700 },
+        { "date": "2023-04-03", "number": 1800 },
+        { "date": "2023-04-04", "number": 1900 },
+        { "date": "2023-04-05", "number": 2000 },
+        { "date": "2023-04-06", "number": 2100 },
+        { "date": "2023-04-07", "number": 2200 }
+      ]
+    },
+    {
+      "provinceID": 48,
+      "data": [
+        { "date": "2023-04-01", "number": 1500 },
+        { "date": "2023-04-02", "number": 1600 },
+        { "date": "2023-04-03", "number": 1700 },
+        { "date": "2023-04-04", "number": 1800 },
+        { "date": "2023-04-05", "number": 1900 },
+        { "date": "2023-04-06", "number": 2000 },
+        { "date": "2023-04-07", "number": 2100 }
+      ]
+    },
+    {
+      "provinceID": 49,
+      "data": [
+        { "date": "2023-04-01", "number": 1000 },
+        { "date": "2023-04-02", "number": 1100 },
+        { "date": "2023-04-03", "number": 1200 },
+        { "date": "2023-04-04", "number": 1300 },
+        { "date": "2023-04-05", "number": 1400 },
+        { "date": "2023-04-06", "number": 1500 },
+        { "date": "2023-04-07", "number": 1600 }
+      ]
+    },
+    {
+      "provinceID": 50,
+      "data": [
+        { "date": "2023-04-01", "number": 900 },
+        { "date": "2023-04-02", "number": 1000 },
+        { "date": "2023-04-03", "number": 1100 },
+        { "date": "2023-04-04", "number": 1200 },
+        { "date": "2023-04-05", "number": 1300 },
+        { "date": "2023-04-06", "number": 1400 },
+        { "date": "2023-04-07", "number": 1500 }
+      ]
+    },{
+      "provinceID": 51,
+      "data": [
+        { "date": "2023-04-01", "number": 1100 },
+        { "date": "2023-04-02", "number": 1200 },
+        { "date": "2023-04-03", "number": 1300 },
+        { "date": "2023-04-04", "number": 1400 },
+        { "date": "2023-04-05", "number": 1500 },
+        { "date": "2023-04-06", "number": 1600 },
+        { "date": "2023-04-07", "number": 1700 }
+      ]
+    },
+    {
+      "provinceID": 52,
+      "data": [
+        { "date": "2023-04-01", "number": 900 },
+        { "date": "2023-04-02", "number": 1000 },
+        { "date": "2023-04-03", "number": 1100 },
+        { "date": "2023-04-04", "number": 1200 },
+        { "date": "2023-04-05", "number": 1300 },
+        { "date": "2023-04-06", "number": 1400 },
+        { "date": "2023-04-07", "number": 1500 }
+      ]
+    },
+    {
+      "provinceID": 53,
+      "data": [
+        { "date": "2023-04-01", "number": 1300 },
+        { "date": "2023-04-02", "number": 1400 },
+        { "date": "2023-04-03", "number": 1500 },
+        { "date": "2023-04-04", "number": 1600 },
+        { "date": "2023-04-05", "number": 1700 },
+        { "date": "2023-04-06", "number": 1800 },
+        { "date": "2023-04-07", "number": 1900 }
+      ]
+    },
+    {
+      "provinceID": 54,
+      "data": [
+        { "date": "2023-04-01", "number": 1700 },
+        { "date": "2023-04-02", "number": 1800 },
+        { "date": "2023-04-03", "number": 1900 },
+        { "date": "2023-04-04", "number": 2000 },
+        { "date": "2023-04-05", "number": 2100 },
+        { "date": "2023-04-06", "number": 2200 },
+        { "date": "2023-04-07", "number": 2300 }
+      ]
+    },
+    {
+      "provinceID": 55,
+      "data": [
+        { "date": "2023-04-01", "number": 1500 },
+        { "date": "2023-04-02", "number": 1600 },
+        { "date": "2023-04-03", "number": 1700 },
+        { "date": "2023-04-04", "number": 1800 },
+        { "date": "2023-04-05", "number": 1900 },
+        { "date": "2023-04-06", "number": 2000 },
+        { "date": "2023-04-07", "number": 2100 }
+      ]
+    },
+    {
+      "provinceID": 56,
+      "data": [
+        { "date": "2023-04-01", "number": 1000 },
+        { "date": "2023-04-02", "number": 1100 },
+        { "date": "2023-04-03", "number": 1200 },
+        { "date": "2023-04-04", "number": 1300 },
+        { "date": "2023-04-05", "number": 1400 },
+        { "date": "2023-04-06", "number": 1500 },
+        { "date": "2023-04-07", "number": 1600 }
+      ]
+    },
+    {
+      "provinceID": 57,
+      "data": [
+        { "date": "2023-04-01", "number": 800 },
+        { "date": "2023-04-02", "number": 900 },
+        { "date": "2023-04-03", "number": 1000 },
+        { "date": "2023-04-04", "number": 1100 },
+        { "date": "2023-04-05", "number": 1200 },
+        { "date": "2023-04-06", "number": 1300 },
+        { "date": "2023-04-07", "number": 1400 }
+      ]
+    },
+    {
+      "provinceID": 58,
+      "data": [
+        { "date": "2023-04-01", "number": 2000 },
+        { "date": "2023-04-02", "number": 2100 },
+        { "date": "2023-04-03", "number": 2200 },
+        { "date": "2023-04-04", "number": 2300 },
+        { "date": "2023-04-05", "number": 2400 },
+        { "date": "2023-04-06", "number": 2500 },
+        { "date": "2023-04-07", "number": 2600 }
+      ]
+    },
+    {
+      "provinceID": 59,
+      "data": [
+        { "date": "2023-04-01", "number": 3000 },
+        { "date": "2023-04-02", "number": 3100 },
+        { "date": "2023-04-03", "number": 3200 },
+        { "date": "2023-04-04", "number": 3300 },
+        { "date": "2023-04-05", "number": 3400 },
+        { "date": "2023-04-06", "number": 3500 },
+        { "date": "2023-04-07", "number": 3600 }
+      ]
+    },
+    {
+      "provinceID": 60,
+      "data": [
+        { "date": "2023-04-01", "number": 4000 },
+        { "date": "2023-04-02", "number": 4100 },
+        { "date": "2023-04-03", "number": 4200 },
+        { "date": "2023-04-04", "number": 4300 },
+        { "date": "2023-04-05", "number": 4400 },
+        { "date": "2023-04-06", "number": 4500 },
+        { "date": "2023-04-07", "number": 4600 }
+      ]
+    },
+    {
+      "provinceID": 61,
+      "data": [
+        { "date": "2023-04-01", "number": 1500 },
+        { "date": "2023-04-02", "number": 1600 },
+        { "date": "2023-04-03", "number": 1700 },
+        { "date": "2023-04-04", "number": 1800 },
+        { "date": "2023-04-05", "number": 1900 },
+        { "date": "2023-04-06", "number": 2000 },
+        { "date": "2023-04-07", "number": 2100 }
+      ]
+    },
+    {
+      "provinceID": 62,
+      "data": [
+        { "date": "2023-04-01", "number": 1800 },
+        { "date": "2023-04-02", "number": 1900 },
+        { "date": "2023-04-03", "number": 2000 },
+        { "date": "2023-04-04", "number": 2100 },
+        { "date": "2023-04-05", "number": 2200 },
+        { "date": "2023-04-06", "number": 2300 },
+        { "date": "2023-04-07", "number": 2400 }
+      ]
+    },
+    {
+      "provinceID": 63,
+      "data": [
+        { "date": "2023-04-01", "number": 1500 },
+        { "date": "2023-04-02", "number": 1600 },
+        { "date": "2023-04-03", "number": 1700 },
+        { "date": "2023-04-04", "number": 1800 },
+        { "date": "2023-04-05", "number": 1900 },
+        { "date": "2023-04-06", "number": 2000 },
+        { "date": "2023-04-07", "number": 2100 }
+      ]
+    }]
+}
