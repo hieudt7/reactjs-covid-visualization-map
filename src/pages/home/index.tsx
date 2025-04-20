@@ -1,10 +1,14 @@
-const Home = () => {
+import { Canvas } from "@react-three/fiber";
 
-  return (
-    <>
-      <h5>Home</h5>
-    </>
-  );
+const Home = () => {
+	return (
+		<Canvas>
+			<mesh>
+				<boxGeometry />
+				<meshStandardMaterial color="red" />
+			</mesh>
+		</Canvas>
+	);
 };
 
 export default Home;
