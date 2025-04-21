@@ -1,21 +1,22 @@
 import mockData from "@/data/mockData.json";
-import { generateColor, getProvince } from "@/utils/map";
+import { generateColor, getProvince, getProvinceData } from "@/utils/map";
 import { useGLTF } from "@react-three/drei";
+import { GroupProps } from "@react-three/fiber";
 import { JSX, useRef } from "react";
 import * as THREE from "three";
 import Province from "./Province";
-type GroupProps = Partial<THREE.Group>;
 
 const VietnamMap = (props: GroupProps) => {
 	const mapRef = useRef<THREE.Group>(null);
-	const { scene } = useGLTF(process.env["PUBLIC_URL"] + "/map.gltf");
+	const { scene } = useGLTF("/models/map.gltf");
 
 	const Provinces = () => {
 		const provinces: JSX.Element[] = [];
 		scene.traverse((child) => {
 			if (child instanceof THREE.Mesh) {
-				const province = getProvince(child.id, mockData);
-				const color = generateColor(province);
+				const province = getProvince(child.name, mockData);
+				const provinceData = getProvinceData(province, mockData);
+				const color = generateColor(provinceData);
 
 				provinces.push(
 					<Province
@@ -24,7 +25,7 @@ const VietnamMap = (props: GroupProps) => {
 						name={child.name}
 						geometry={child.geometry}
 						color={color}
-						provinceData={province}
+						provinceData={provinceData}
 					/>
 				);
 			}
@@ -33,7 +34,15 @@ const VietnamMap = (props: GroupProps) => {
 	};
 
 	return (
-		<group ref={mapRef} {...props} dispose={null} position={[-10, 0, 5]}>
+		<group
+			ref={mapRef}
+			{...props}
+			dispose={null}
+			position={[-2, 0, 1]}
+			scale={[2, 2, 2]}
+			castShadow
+			receiveShadow
+		>
 			<Provinces />
 		</group>
 	);

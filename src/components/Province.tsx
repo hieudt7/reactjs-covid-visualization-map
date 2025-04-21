@@ -1,16 +1,19 @@
 import useMapStore from "@/store/useMapStore";
 import { ProvinceProps } from "@/types/home";
+import { formatProvinceName } from "@/utils/map";
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import TextGenerate from "./TextGenerate";
 
 const Province = ({
 	name,
 	color,
 	position,
 	geometry,
-}: Partial<ProvinceProps>) => {
-	const provinceRef = useRef<THREE.Mesh>(null);
+	provinceData,
+}: ProvinceProps) => {
+	const provinceRef = useRef<THREE.Group>(null);
 	const [hovered, setHovered] = useState<boolean>(false);
 	const setCameraPosition = useMapStore((state) => state.setCameraPosition);
 	const activeMesh = useMapStore((state) => state.activeMesh);
@@ -39,6 +42,7 @@ const Province = ({
 	return (
 		<group
 			ref={provinceRef}
+			name={name || undefined}
 			onClick={() => {
 				setCameraPosition({ activeMesh: name });
 			}}
@@ -46,11 +50,37 @@ const Province = ({
 			onPointerOut={() => setHovered(false)}
 			position={position}
 		>
+			<TextGenerate
+				name={name || ""}
+				animate={false}
+				position={new THREE.Vector3(0, 0.01, 0.01)}
+				text={formatProvinceName(name)}
+				hovered={hovered}
+				color="#ffffff"
+			/>
+			<TextGenerate
+				name={name || ""}
+				color={"#111"}
+				animate
+				position={new THREE.Vector3(0, 0.01, -0.05)}
+				text={`Infected: ${provinceData.casesInfected}
+Deaths: ${provinceData.casesDeaths}
+Recovered: +${provinceData.casesRecovered}`}
+				hovered={hovered}
+				textAlign="left"
+			/>
 			<mesh
 				castShadow
 				receiveShadow
 				geometry={geometry}
-				material={new THREE.MeshStandardMaterial({ color })}
+				material={
+					new THREE.MeshStandardMaterial({
+						color,
+						roughness: 0.8,
+						metalness: 0,
+						flatShading: true,
+					})
+				}
 			/>
 		</group>
 	);
