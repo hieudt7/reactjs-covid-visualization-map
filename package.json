@@ -59,6 +59,7 @@
 		"@types/mapbox-gl": "^3.4.1",
 		"@types/react-color": "^3.0.13",
 		"@types/styled-components": "^5.1.34",
+		"chroma-js": "^3.1.2",
 		"dayjs": "^1.11.13",
 		"deck.gl": "^9.1.6",
 		"mapbox-gl": "^3.10.0",
@@ -76,8 +77,8 @@
 		"threejs-navigator-gizmo": "^0.0.6",
 		"zod": "^3.23.8",
 		"zustand": "^4.5.5"
-	  },
-	  "devDependencies": {
+	},
+	"devDependencies": {
 		"@commitlint/cli": "^19.6.0",
 		"@commitlint/config-conventional": "^19.6.0",
 		"@commitlint/cz-commitlint": "^19.5.0",
@@ -99,6 +100,7 @@
 		"@testing-library/react": "^16.0.1",
 		"@testing-library/user-event": "^14.5.2",
 		"@total-typescript/ts-reset": "^0.6.0",
+		"@types/chroma-js": "^3.1.1",
 		"@types/eslint__js": "^8.42.3",
 		"@types/mapbox__mapbox-gl-geocoder": "^5.0.0",
 		"@types/node": "^22.5.1",
@@ -143,7 +145,7 @@
 		"vite": "^6.2.2",
 		"vite-plugin-static-copy": "^1.0.6",
 		"vitest": "^3.0.9"
-	  },
+	},
 	"config": {
 		"commitizen": {
 			"path": "@commitlint/cz-commitlint"
