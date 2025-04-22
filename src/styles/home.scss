@@ -1,0 +1,54 @@
+.color-indicator{
+    cursor: pointer;
+    transition: opacity 0.2s;
+    &:hover{
+        opacity: 1 !important;
+    }
+}
+.top-cities-table{
+    color:#28667e;
+    margin-bottom: 20px;
+    .top-cities-number{
+        font-size: 48px;
+        line-height: 44px;
+    }
+    .top-cities-description-container{
+        font-weight: 500;
+        span{
+            display: block;
+        }
+    }
+    .top-cities-title{
+        position: absolute;
+        transform: rotate(-90deg) translate(0%, -140px);
+        left: 0;
+        top: 43%;
+    }
+    .table-chart-content{
+        &:hover{
+            background-color: rgba(40, 102, 126, 0.2);
+        }
+    }
+    &.warning-styles{
+        .top-cities-sub-description,
+        .table-chart-content{
+            // color:red;
+            color:#792884;
+            
+        }
+        .table-chart-bg{
+            // background-color: red;
+            background-color: #792884;
+        }
+    }
+    &.available-styles{
+        .top-cities-sub-description,
+        .table-chart-content{
+            color:#16a34a;
+        }
+        .table-chart-bg{
+            background-color: #16a34a;
+            max-width: 130px;
+        }
+    }
+}

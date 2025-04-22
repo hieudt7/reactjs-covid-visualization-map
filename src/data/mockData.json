@@ -72,9 +72,9 @@
 		},
 		{
 			"provinceID": 2,
-			"casesInfected": 100000,
+			"casesInfected": 1700,
 			"casesDeaths": 1200,
-			"casesRecovered": 100000
+			"casesRecovered": 500
 		},
 		{
 			"provinceID": 3,

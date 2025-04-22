@@ -1,7 +1,7 @@
 import { useFrame } from "@react-three/fiber";
 import { useState } from "react";
 import * as THREE from "three";
-import useMapStore from "../store/useMapStore";
+import useMapStore from "@/store/useMapStore";
 
 const CameraControl = () => {
 	const activeMesh = useMapStore((state) => state.activeMesh);
@@ -14,7 +14,7 @@ const CameraControl = () => {
 
 			const cameraPosition = {
 				x: target.x,
-				y: target.y + 5,
+				y: target.y + 3,
 				z: target.z + 7,
 			};
 
