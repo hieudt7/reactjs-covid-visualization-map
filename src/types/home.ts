@@ -12,6 +12,12 @@ export interface ProvinceData {
 	casesDeaths: number;
 	casesRecovered: number;
 }
+export interface ProvinceReportData {
+	name: string,
+	cases: number,
+	deaths: number,
+	recovered: number,
+}
 
 export interface Data {
 	provinces: Province[];

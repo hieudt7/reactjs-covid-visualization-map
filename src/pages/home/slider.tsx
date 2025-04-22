@@ -6,6 +6,7 @@ import useRangeStore from '@/store/useRangeStore';
 const sliderBarHeight = 12;
 const sliderBarWidth = 220;
 
+// Styles cho slider vẫn cần dùng styled-components vì Tailwind không thể override MUI styles
 const GradientSlider = styled(Slider)({
   height: sliderBarHeight,
   width: sliderBarWidth,
@@ -28,11 +29,11 @@ const GradientSlider = styled(Slider)({
     backgroundColor: '#fff',
     border: '2px solid currentColor',
     borderRadius: '50%',
-    '&[data-index="0"]':{
-        marginLeft:'0%'
+    '&[data-index="0"]': {
+      marginLeft: '0%'
     },
-    '&[data-index="1"]':{
-        marginRight:'0%'
+    '&[data-index="1"]': {
+      marginRight: '0%'
     },
     '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
       boxShadow: 'inherit',
@@ -93,14 +94,14 @@ export const RangeSlider = ({
   };
 
   const getColorByValue = (value: number): string => {
-    if (value <= 25) return 'text-green-500';
+    if (value <= 25) return 'text-[#028d02]';
     if (value <= 100) return 'text-yellow-500';
     return 'text-red-500';
   };
 
   return (
     <div className="w-full px-3">
-      <div className="flex justify-between mb-1">
+      <div className="flex items-center justify-between mb-4">
         <span className="text-xs text-gray-500">
           {label}
         </span>
@@ -108,20 +109,22 @@ export const RangeSlider = ({
           {value[0].toFixed(1)} - {value[1].toFixed(1)}
         </span>
       </div>
-      <GradientSlider
-        value={value}
-        onChange={handleChange}
-        min={min}
-        max={max}
-        valueLabelDisplay="auto"
-      />
-      <div className="flex justify-between mt-1">
+      <div className="flex justify-center mb-4">
+        <GradientSlider
+          value={value}
+          onChange={handleChange}
+          min={min}
+          max={max}
+          valueLabelDisplay="auto"
+        />
+      </div>
+      <div className="flex justify-between mt-4">
         {Object.entries(locations).map(([location, value]) => (
           <div key={location} className="text-center">
             <span className={`text-sm font-bold ${getColorByValue(value)}`}>
               {value.toFixed(1)}
             </span>
-            <span className="block text-xs text-gray-500">
+            <span className="block text-xs text-gray-500 mt-1">
               {location}
             </span>
           </div>
