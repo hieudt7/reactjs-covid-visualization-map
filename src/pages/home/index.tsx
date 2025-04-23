@@ -5,7 +5,7 @@ import VietnamMap from "./components/map/VietnamMap";
 import { Canvas } from "@react-three/fiber";
 import mockData from "@/data/mockData.json";
 import { getTopProvincesByCases } from "@/utils/map";
-import { VisualizationMap } from "@/components/hospital/visualizationMap";
+import { VisualizationMap } from "@/components/hospital/VisualizationMap";
 const Home = () => {
 	const top10MostInfectedCities = getTopProvincesByCases({ data: mockData, pageSize: 10, ascending: false });
 	const top10LeastInfectedCities = getTopProvincesByCases({ data: mockData, pageSize: 10, ascending: true });
