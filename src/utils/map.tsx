@@ -1,4 +1,11 @@
 import { Data, Province, ProvinceData } from "@/types/home";
+import { COLOR_THRESHOLDS } from "@/constant/visualization-data";
+export interface TopProvinceData {
+	name: string;
+	cases: number;
+	deaths: number;
+	recovered: number;
+}
 
 export function normalText(text: string) {
 	if (text === "Bà Rịa – Vũng Tàu") return "Vung_Tau";
@@ -30,15 +37,6 @@ export const formatProvinceName = (name: string | null | undefined): string => {
 	return name.replace(/_/g, " ");
 };
 
-export const COLOR_THRESHOLDS = [
-	{ threshold: 1000, color: "#DC2626" }, // Bright red
-	{ threshold: 500, color: "#EA580C" }, // Orange-red
-	{ threshold: 200, color: "#F59E0B" }, // Orange
-	{ threshold: 100, color: "#EAB308" }, // Yellow
-	{ threshold: 10, color: "#84CC16" }, // Light green
-	{ threshold: 0, color: "#16A34A" }, // Green
-] as const;
-
 export function generateColor(province?: ProvinceData) {
 	if (!province) {
 		return "#F3F4F6"; // Very light gray
@@ -51,14 +49,16 @@ export function generateColor(province?: ProvinceData) {
 	);
 }
 
-export interface TopProvinceData {
-	name: string;
-	cases: number;
-	deaths: number;
-	recovered: number;
-}
-
-export const getTopProvincesByCases = (data: Data, limit: number = 10) => {
+export const getTopProvincesByCases = ({ 
+  data, 
+  pageSize = 0, 
+  ascending = false 
+}: { 
+  data: Data; 
+  pageSize?: number; 
+  ascending?: boolean;
+}) => {
+	const limit = pageSize === 0 ? data.provinces.length : pageSize;
 	return data.provinces
 		.map((province) => {
 			const dailyData = data.dailyReports.find(
@@ -71,6 +71,10 @@ export const getTopProvincesByCases = (data: Data, limit: number = 10) => {
 				recovered: dailyData?.casesRecovered || 0,
 			};
 		})
-		.sort((a: TopProvinceData, b: TopProvinceData) => b.cases - a.cases)
+		.sort((a: TopProvinceData, b: TopProvinceData) => {
+			// Nếu pageSize < 0, sắp xếp từ dưới lên (ít ca nhiễm nhất lên đầu)
+			// Nếu pageSize >= 0, sắp xếp từ trên xuống (nhiều ca nhiễm nhất lên đầu)
+			return ascending ? a.cases - b.cases : b.cases - a.cases;
+		})
 		.slice(0, limit);
 };
