@@ -8,16 +8,16 @@ import InfectionSource from "./components/InfectionSource";
 const Dashboard = () => {
 	return (
 		<div className="w-full h-screen px-6 py-4 overflow-auto">
-			<div className="text-3xl font-bold mb-6 uppercase flex flex-col tracking-wider">
+			<div className="text-3xl font-bold mb-6 uppercase flex flex-col tracking-wider" data-aos="fade-right" data-aos-easing="ease-out-back" data-aos-duration="1000">
 				<span className="text-dark-green">Comprehensive Report</span>{" "}
 				<span className="text-custom-purple ml-40">of COVID-19 in Vietnam</span>
 			</div>
 			<div className="grid grid-cols-2 gap-6 ">
-				<div className="w-[70%]">
+				<div className="w-[70%]" data-aos="fade-right" data-aos-easing="ease-out-back" data-aos-duration="1000">
 					<PieChart />
 					<BarChart />
 				</div>
-				<div className="w-full max-w-[800px] flex flex-col gap-12">
+				<div className="w-full max-w-[800px] flex flex-col gap-12" data-aos="fade-left" data-aos-easing="ease-out-back" data-aos-duration="1000">
 					<DailyThresholdStats />
 					<InfectionSource />
 				</div>

@@ -52,3 +52,44 @@
         }
     }
 }
+.menu-link{
+    position: relative;
+    transition: color 0.25s;
+    &:before{
+        content:"";
+        position: absolute;
+        width:0;
+        height:3px;
+        background-color: #4a148c;
+        left:0;
+        bottom:-5px;
+        transition: width 0.25s;
+    }
+    &:hover,
+    &.active-link{
+        color:#4a148c;
+        &:before{
+            width:100%;
+        }
+    }
+}
+
+.phone-icon{
+    animation: animation-phone-ring 2s ease-in-out infinite;
+}
+
+@keyframes animation-phone-ring {
+    20% { transform: rotate(0deg); }
+  21% { transform: rotate(10deg); }
+  22% { transform: rotate(-10deg); }
+  23% { transform: rotate(12deg); }
+  24% { transform: rotate(-12deg); }
+  25% { transform: rotate(12deg); }
+  26% { transform: rotate(-12deg); }
+  28% { transform: rotate(10deg); }
+  30% { transform: rotate(-10deg); }
+  32% { transform: rotate(5deg); }
+  34% { transform: rotate(-5deg); }
+  36% { transform: rotate(2deg); }
+  38% { transform: rotate(0deg); }
+  }

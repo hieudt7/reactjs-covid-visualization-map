@@ -30,23 +30,25 @@ const Home = () => {
 				>
 					<VietnamMap />
 				</Canvas>
-				<div className="absolute left-5 top-5 z-[1000]">
+				<div className="absolute left-5 top-5 z-[1000]" data-aos="fade-right" data-aos-easing="ease-out-back" data-aos-duration="1000">
 					<ProvinceDataTable />
 				</div>
 				<div className="absolute left-1/2 translate-x-[-50%] top-5 z-[1000]">
 					<ColorIndicator />
 				</div>
 				<div className="absolute right-5 top-1/2 translate-y-[-50%] z-[1000] uppercase">
-					<TopCitiesTable
-						data={top10MostInfectedCities}
-						title="with Most Cases"
-						type="most"
-					/>
-					<TopCitiesTable
-						data={top10LeastInfectedCities}
-						title="with Least Cases"
-						type="least"
-					/>
+					<div data-aos="fade-left" data-aos-easing="ease-out-back" data-aos-duration="1000">
+						<TopCitiesTable
+							data={top10MostInfectedCities}
+							title="with Most Cases"
+							type="most"
+						/>
+						<TopCitiesTable
+							data={top10LeastInfectedCities}
+							title="with Least Cases"
+							type="least"
+						/>
+					</div>
 				</div>
 			</div>
 		</>
