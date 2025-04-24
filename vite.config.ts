@@ -24,5 +24,6 @@ export default defineConfig({
 	build: {
 		commonjsOptions: {
 		}
-	}
+	},
+	base:'/reactjs-covid-visualization-map'
 });
