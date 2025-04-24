@@ -1,3 +1,4 @@
+import { useCursorPointer } from "@/hooks/useCursorPointer";
 import { animated, useSpring } from "@react-spring/three";
 import { Text } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
@@ -28,6 +29,7 @@ const PieSlice: React.FC<PieSliceProps> = ({
 	const meshRef = useRef<THREE.Mesh>(null);
 	const points: THREE.Vector2[] = [];
 	const segments = 64;
+	useCursorPointer(!isHovered);
 
 	// Ensure angles are in the correct range
 	const normalizedStartAngle = startAngle % (Math.PI * 2);

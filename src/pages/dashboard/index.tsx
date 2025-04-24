@@ -1,4 +1,5 @@
 import { VisualizationMap } from "@/components/hospital/VisualizationMap";
+import ScrollToTop from "@/components/ScrollToTop";
 import BarChart from "@/pages/dashboard/components/BarChart";
 import PieChart from "@/pages/dashboard/components/PieChart";
 import DailyThresholdStats from "./components/DailyThresholdStats";
@@ -24,8 +25,9 @@ const Dashboard = () => {
 			<h2 className="text-xl font-bold uppercase text-custom-purple mb-8">
 				COVID Treatment Centers
 			</h2>
-			<div className="w-screen h-screen relative">
+			<div className="w-full h-screen relative">
 				<VisualizationMap />
+				<ScrollToTop />
 			</div>
 		</div>
 	);

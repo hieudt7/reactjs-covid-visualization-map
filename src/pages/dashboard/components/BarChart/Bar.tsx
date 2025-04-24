@@ -1,3 +1,4 @@
+import { useCursorPointer } from "@/hooks/useCursorPointer";
 import { Html } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
@@ -17,6 +18,8 @@ const Bar = ({ height, position, color, value }: BarProps) => {
 	const [material, setMaterial] = useState<THREE.MeshStandardMaterial | null>(
 		null
 	);
+
+	useCursorPointer(!hovered);
 
 	// Animation for the height
 	useFrame(() => {

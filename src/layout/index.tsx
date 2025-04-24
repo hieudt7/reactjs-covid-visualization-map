@@ -11,10 +11,7 @@ const LayoutComponent = () => {
 	return (
 		<div className="w-full h-screen flex flex-col overflow-hidden">
 			<HeaderComponent />
-			<main
-				className="flex-1 pt-16 pb-32"
-				//style={{ maxHeight: "calc(100vh - 64px)", overflow: "hidden" }}
-			>
+			<main className="flex-1 pt-16">
 				<ErrorBoundary fallbackRender={fallbackRender}>
 					<Suspense
 						fallback={

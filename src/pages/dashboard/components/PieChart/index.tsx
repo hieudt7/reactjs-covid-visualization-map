@@ -39,7 +39,7 @@ const PieChart: React.FC = () => {
 					all information accurate as of the present day
 				</span>
 			</h2>
-			<div className="w-full h-[400px]">
+			<div className="w-full h-[450px]">
 				<Canvas camera={{ position: [0, 4, 2], fov: 70 }} shadows>
 					<ambientLight intensity={2} />
 					<pointLight position={[10, 10, 10]} intensity={0.5} />

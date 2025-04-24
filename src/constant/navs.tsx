@@ -8,14 +8,14 @@ import type { TypeNavs, TypeRoutes } from "./type-navs";
 
 const navs: Array<TypeNavs> = [
 	{
-		key: HOME_PATH,
-		label: "Home",
-		element: <Home />,
-	},
-	{
 		key: DASHBOARD_PATH,
 		label: "Dashboard",
 		element: <Dashboard />,
+	},
+	{
+		key: HOME_PATH,
+		label: "Covid Data",
+		element: <Home />,
 	},
 ];
 
