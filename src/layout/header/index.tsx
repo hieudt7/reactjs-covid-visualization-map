@@ -1,34 +1,35 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { navList } from '@/constant/navs';
-import { useActiveMenu } from '@/hooks';
-
+import { navList } from "@/constant/navs";
+import { useActiveMenu } from "@/hooks";
+import VietnamFlag from "/images/vietnam-flag.png";
 const HeaderComponent = () => {
-  const { checkActive } = useActiveMenu();
+	const { checkActive } = useActiveMenu();
 
-  return (
-    <header className="bg-secondary block fixed w-full inset-x-0 z-30 h-16 px-4 shadow-xl">
-      <div className="w-full h-full flex items-center justify-between mx-auto">
-        <div className="w-full flex justify-between items-center">
-          <div className="flex gap-5">
-            {navList.map((item) => (
-              <Link key={item.key} to={item.key}>
-                <span
-                  className={`uppercase font-bold text-sm px-4 py-2 ${
-                    checkActive(item.key)
-                      ? 'bg-slate-400 dark:bg-slate-700'
-                      : 'bg-slate-300 dark:bg-slate-500'
-                  }  hover:bg-slate-400  dark:hover:bg-slate-700 rounded-md transition-all duration-150`}
-                >
-                  {item.label}
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </header>
-  );
+	return (
+		<header className="bg-gradient-to-r from-teal-800 to-blue-900 block fixed w-full inset-x-0 z-30 h-16 px-4 shadow-md">
+			<div className="w-full h-full flex items-center justify-between mx-auto">
+				<div className="w-full flex justify-between items-center">
+					<img src={VietnamFlag} alt="Vietnam Flag" className="w-12 h-12" />
+					<div className="flex gap-5">
+						{navList.map((item) => (
+							<Link key={item.key} to={item.key}>
+								<span
+									className={`font-bold text-m py-2 text-white ${
+										checkActive(item.key)
+											? "border-b-2 border-white"
+											: "hover:text-gray-200 hover:border-b-2 hover:border-gray-200"
+									} transition-all duration-150`}
+								>
+									{item.label}
+								</span>
+							</Link>
+						))}
+					</div>
+				</div>
+			</div>
+		</header>
+	);
 };
 
 export default HeaderComponent;
