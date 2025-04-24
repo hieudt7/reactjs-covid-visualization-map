@@ -21,10 +21,10 @@ const BarChart = () => {
 					<directionalLight position={[0, 5, 5]} />
 					{weeklyReport.map((item, index) => (
 						<group key={item.date} position={[index * 2 - 4, -1, 0]}>
-							{/* Deaths - Green */}
+							{/* Deaths - Purple */}
 							<Bar
 								height={item.totalDeaths / 25000}
-								color={"mediumseagreen"}
+								color={"mediumpurple"}
 								position={[-0.5, 0, 0]}
 								value={item.totalDeaths}
 							/>
@@ -35,10 +35,10 @@ const BarChart = () => {
 								position={[0, 0, 0]}
 								value={item.totalInfected}
 							/>
-							{/* Recovered - Purple */}
+							{/* Recovered - Green */}
 							<Bar
 								height={item.totalRecovered / 25000}
-								color={"mediumpurple"}
+								color={"mediumseagreen"}
 								position={[0.5, 0, 0]}
 								value={item.totalRecovered}
 							/>
