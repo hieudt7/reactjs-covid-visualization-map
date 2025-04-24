@@ -9,6 +9,13 @@ import { MapboxOverlay as DeckOverlay } from "@deck.gl/mapbox";
 import { ScenegraphLayer } from "@deck.gl/mesh-layers";
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
+import {
+	CheckSolid,
+	LocationHomeSolid,
+	TelephoneCallSolid,
+	UsersGroupSolid,
+	XSolid,
+} from "@mynaui/icons-react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useState } from "react";
@@ -166,12 +173,12 @@ export const VisualizationMap: React.FC = () => {
 						{hoverInfo.building?.name}
 					</div>
 					<div className="text-sm mb-2 text-dark-green flex items-center gap-2">
-						<span className="text-base">📍</span>
+						<LocationHomeSolid className="text-[#F97316]" />
 						{hoverInfo.building?.address}
 					</div>
 					{hoverInfo.building?.phone && (
 						<div className="text-sm mb-2 text-dark-green flex items-center gap-2">
-							<span className="text-base">☎</span>
+							<TelephoneCallSolid className="text-[#66b2f5]" />
 							{hoverInfo.building.phone}
 						</div>
 					)}
@@ -179,12 +186,16 @@ export const VisualizationMap: React.FC = () => {
 						className={`text-sm mb-2 font-semibold flex items-center gap-2 
                         ${hoverInfo.building?.status === "available" ? "text-green-600" : "text-red-600"}`}
 					>
-						<span className="text-base">⚡</span>
+						{hoverInfo.building?.status === "available" ? (
+							<CheckSolid className="text-green-600" />
+						) : (
+							<XSolid className="text-red-600" />
+						)}
 						Status:{" "}
 						{hoverInfo.building?.status === "available" ? "Available" : "Full"}
 					</div>
 					<div className="text-sm text-dark-green flex items-center gap-2">
-						<span className="text-base">👥</span>
+						<UsersGroupSolid className="text-custom-purple" />
 						Patient count: {hoverInfo.building?.patients}
 					</div>
 				</div>
