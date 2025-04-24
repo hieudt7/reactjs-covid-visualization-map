@@ -8,7 +8,7 @@ const InfectionSource = () => {
 					{sources.length}
 				</div>
 				<h2 className="text-xl">
-					<span className="text-purple-800 "> Primary Source of</span> <br />
+					<span className="text-custom-purple "> Primary Source of</span> <br />
 					<span className="text-dark-green">COVID-19 transmission</span>
 				</h2>
 			</div>

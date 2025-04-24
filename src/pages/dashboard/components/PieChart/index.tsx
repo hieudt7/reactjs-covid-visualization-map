@@ -32,7 +32,7 @@ const PieChart: React.FC = () => {
 
 	return (
 		<div className="flex flex-col items-center gap-6 relative">
-			<h2 className="text-xl font-normal absolute top-5 text-custom-purple uppercase text-center">
+			<h2 className="text-xl font-bold absolute top-5 text-custom-purple uppercase text-center">
 				COVID-19 vaccination report
 				<br />
 				<span className="text-dark-green text-sm lowercase">

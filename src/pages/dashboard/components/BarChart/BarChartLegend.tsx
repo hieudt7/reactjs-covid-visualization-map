@@ -12,7 +12,7 @@ const LegendItem: React.FC<LegendItemProps> = ({ color, label }) => (
 
 const PieChartLegend: React.FC = () => {
 	return (
-		<div className="flex gap-8 p-4 bg-white rounded-lg shadow-sm absolute top-14">
+		<div className="flex gap-8 p-4 bg-white rounded-lg shadow-sm absolute bottom-9">
 			<LegendItem color="mediumseagreen" label="Deaths" />
 			<LegendItem color="gold" label="Infected" />
 			<LegendItem color="mediumpurple" label="Recovered" />

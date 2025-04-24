@@ -8,14 +8,16 @@ import {
 
 const ProvinceDataTable = () => {
 	const setCameraPosition = useMapStore((state) => state.setCameraPosition);
-	const provincesWithData = getTopProvincesByCases({ data: mockData, pageSize: 0, ascending: false });
+	const provincesWithData = getTopProvincesByCases({
+		data: mockData,
+		pageSize: 0,
+		ascending: false,
+	});
 
 	return (
 		<div className="w-80 bg-gradient-to-br from-white to-green-50/20 p-4 rounded-lg shadow-lg mt-4 backdrop-blur-sm border border-green-100/30">
-			<div className="flex items-center justify-between mb-3">
-				<h3 className="text-base font-semibold text-[#28667e]">
-					All cities
-				</h3>
+			<div className="flex items-center justify-between mb-3 uppercase">
+				<h3 className="text-base font-semibold text-[#28667e]">All cities</h3>
 				<span className="text-xs text-[#28667e]">
 					Updated: {new Date().toLocaleDateString()}
 				</span>

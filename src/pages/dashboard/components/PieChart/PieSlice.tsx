@@ -1,6 +1,7 @@
 import { animated, useSpring } from "@react-spring/three";
 import { Text } from "@react-three/drei";
-import { useState } from "react";
+import { useFrame } from "@react-three/fiber";
+import { useRef, useState } from "react";
 import * as THREE from "three";
 
 interface PieSliceProps {
@@ -23,6 +24,8 @@ const PieSlice: React.FC<PieSliceProps> = ({
 	percentage,
 }) => {
 	const [isHovered, setIsHovered] = useState(false);
+	const [currentEndAngle, setCurrentEndAngle] = useState(startAngle);
+	const meshRef = useRef<THREE.Mesh>(null);
 	const points: THREE.Vector2[] = [];
 	const segments = 64;
 
@@ -31,7 +34,7 @@ const PieSlice: React.FC<PieSliceProps> = ({
 	const normalizedEndAngle = endAngle % (Math.PI * 2);
 
 	// Calculate angle step
-	const angleStep = (normalizedEndAngle - normalizedStartAngle) / segments;
+	const angleStep = (currentEndAngle - normalizedStartAngle) / segments;
 
 	// Create points for the pie slice
 	for (let index = 0; index <= segments; index++) {
@@ -73,9 +76,19 @@ const PieSlice: React.FC<PieSliceProps> = ({
 		config: { mass: 1, tension: 280, friction: 60 },
 	});
 
+	// Animate the slice appearance like opening a fan
+	useFrame(() => {
+		if (currentEndAngle < normalizedEndAngle) {
+			setCurrentEndAngle((previous) =>
+				Math.min(previous + 0.05, normalizedEndAngle)
+			);
+		}
+	});
+
 	return (
 		<group>
 			<animated.mesh
+				ref={meshRef}
 				position-x={positionX}
 				position-y={positionY}
 				scale={scale}
@@ -93,17 +106,19 @@ const PieSlice: React.FC<PieSliceProps> = ({
 					shadowSide={THREE.DoubleSide}
 				/>
 			</animated.mesh>
-			<Text
-				position={textPosition}
-				rotation={[0, 0, 0]}
-				fontSize={0.2}
-				color="#ffffff"
-				anchorX="center"
-				anchorY="middle"
-				fontWeight={600}
-			>
-				{`${Math.round(percentage)}%`}
-			</Text>
+			{currentEndAngle >= normalizedEndAngle && (
+				<Text
+					position={textPosition}
+					rotation={[0, 0, 0]}
+					fontSize={0.2}
+					color="#ffffff"
+					anchorX="center"
+					anchorY="middle"
+					fontWeight={600}
+				>
+					{`${Math.round(percentage)}%`}
+				</Text>
+			)}
 		</group>
 	);
 };
