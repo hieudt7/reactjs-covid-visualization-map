@@ -19,9 +19,24 @@ export interface ProvinceReportData {
 	recovered: number,
 }
 
+export interface WeeklyReport {
+	date: string;
+	totalInfected: number;
+	totalDeaths: number;
+	totalRecovered: number;
+}
+
+export interface VaccineReport {
+	firstDose: number;
+	secondDose: number;
+	noDose: number;
+}
+
 export interface Data {
 	provinces: Province[];
 	dailyReports: ProvinceData[];
+	weeklyReport: WeeklyReport[];
+	vaccineReport: VaccineReport;
 }
 
 export interface ProvinceProps {

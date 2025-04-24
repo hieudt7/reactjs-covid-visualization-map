@@ -1,20 +1,25 @@
+import { useCursorPointer } from "@/hooks/useCursorPointer";
 import { Html } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
-import { BarProps } from "./BarChart.types";
+
+interface BarProps {
+	height: number;
+	position: [number, number, number];
+	color: string;
+	value: number;
+}
 
 const Bar = ({ height, position, color, value }: BarProps) => {
 	const mesh = useRef<THREE.Mesh>(null);
-
 	const [h, setH] = useState<number>(0);
 	const [hovered, setHovered] = useState(false);
-
-	const percentageOfMale = Number(
-		((value.male / value.total) * 100).toFixed(2)
+	const [material, setMaterial] = useState<THREE.MeshStandardMaterial | null>(
+		null
 	);
 
-	const percentageOfFemale = Number((100 - percentageOfMale).toFixed(2));
+	useCursorPointer(!hovered);
 
 	// Animation for the height
 	useFrame(() => {
@@ -22,6 +27,21 @@ const Bar = ({ height, position, color, value }: BarProps) => {
 			setH((previousHeight) => Math.min(previousHeight + 0.04, height)); // Increasing the height slowly
 		}
 	});
+
+	// Update material color on hover
+	useEffect(() => {
+		if (material) {
+			material.color.set(
+				hovered ? new THREE.Color(color).multiplyScalar(1.5) : color
+			);
+			material.emissive.set(
+				hovered
+					? new THREE.Color(color).multiplyScalar(0.2)
+					: new THREE.Color(0x000000)
+			);
+		}
+	}, [hovered, color, material]);
+
 	//Ensuring that the mesh's position is updated correctly whenever the height of the bar (h) changes
 	useEffect(() => {
 		if (mesh.current) {
@@ -38,14 +58,20 @@ const Bar = ({ height, position, color, value }: BarProps) => {
 				onPointerOut={() => setHovered(false)}
 			>
 				<boxGeometry args={[0.5, h, 0.5]} />
-				<meshStandardMaterial color={color} />
+				<meshStandardMaterial
+					ref={setMaterial}
+					color={color}
+					emissive={new THREE.Color(0x000000)}
+					emissiveIntensity={0}
+				/>
 			</mesh>
 			{hovered && (
-				<Html position={[position[0], height - 0.4, position[2]]}>
-					<div className="tooltip">
-						<p>{`Male: ${percentageOfMale}%`} </p>
-						<p>{`Female: ${percentageOfFemale}%`} </p>
-					</div>
+				<Html
+					position={[position[0], h + 0.1, position[2]]}
+					center
+					className="bg-dark-green px-2.5 py-1.5 rounded text-white text-xs whitespace-nowrap pointer-events-none -translate-x-1/2 -translate-y-1/2"
+				>
+					{value.toLocaleString()}
 				</Html>
 			)}
 		</>

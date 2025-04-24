@@ -1,11 +1,12 @@
+import useColorFilterStore from "@/store/useColorFilterStore";
 import useMapStore from "@/store/useMapStore";
 import { ProvinceProps } from "@/types/home";
 import { formatProvinceName } from "@/utils/map";
 import { useFrame } from "@react-three/fiber";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import * as THREE from "three";
 import TextGenerate from "./TextGenerate";
-import useColorFilterStore from "@/store/useColorFilterStore";
+import { useCursorPointer } from "@/hooks/useCursorPointer";
 
 const Province = ({
 	name,
@@ -20,16 +21,7 @@ const Province = ({
 	const activeMesh = useMapStore((state) => state.activeMesh);
 	const { activeFilter } = useColorFilterStore();
 
-	useEffect(() => {
-		if (hovered) {
-			return () => {
-				document.body.style.cursor = "pointer";
-			};
-		}
-		return () => {
-			document.body.style.cursor = "auto";
-		};
-	}, [hovered]);
+	useCursorPointer(hovered);
 
 	useFrame(() => {
 		if (provinceRef.current) {
