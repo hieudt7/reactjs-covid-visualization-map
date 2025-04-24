@@ -18,6 +18,7 @@ import {
 	NavigationControl,
 	useControl,
 } from "react-map-gl";
+import { LocationSelected, Telephone, User, Ambulance } from "@mynaui/icons-react";
 
 const INITIAL_VIEW_STATE = {
 	longitude: 105.8419,
@@ -136,12 +137,12 @@ export const VisualizationMap: React.FC = () => {
 						{hoverInfo.building?.name}
 					</div>
 					<div className="text-sm mb-2 text-dark-green flex items-center gap-2">
-						<span className="text-base">📍</span>
+						<span className="text-base"><LocationSelected /></span>
 						{hoverInfo.building?.address}
 					</div>
 					{hoverInfo.building?.phone && (
 						<div className="text-sm mb-2 text-dark-green flex items-center gap-2">
-							<span className="text-base">☎</span>
+							<span className="text-base"><Telephone /></span>
 							{hoverInfo.building.phone}
 						</div>
 					)}
@@ -149,12 +150,12 @@ export const VisualizationMap: React.FC = () => {
 						className={`text-sm mb-2 font-semibold flex items-center gap-2 
                         ${hoverInfo.building?.status === "available" ? "text-green-600" : "text-red-600"}`}
 					>
-						<span className="text-base">⚡</span>
+						<span className="text-base"><Ambulance /></span>
 						Status:{" "}
 						{hoverInfo.building?.status === "available" ? "Available" : "Full"}
 					</div>
 					<div className="text-sm text-dark-green flex items-center gap-2">
-						<span className="text-base">👥</span>
+						<span className="text-base"><User /></span>
 						Patient count: {hoverInfo.building?.patients}
 					</div>
 				</div>
