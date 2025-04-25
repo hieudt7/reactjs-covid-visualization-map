@@ -10,11 +10,10 @@ import { ScenegraphLayer } from "@deck.gl/mesh-layers";
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import {
-	CheckSolid,
+	Ambulance,
 	LocationHomeSolid,
 	TelephoneCallSolid,
 	UsersGroupSolid,
-	XSolid,
 } from "@mynaui/icons-react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -186,11 +185,7 @@ export const VisualizationMap: React.FC = () => {
 						className={`text-sm mb-2 font-semibold flex items-center gap-2 
                         ${hoverInfo.building?.status === "available" ? "text-green-600" : "text-red-600"}`}
 					>
-						{hoverInfo.building?.status === "available" ? (
-							<CheckSolid className="text-green-600" />
-						) : (
-							<XSolid className="text-red-600" />
-						)}
+						<Ambulance />
 						Status:{" "}
 						{hoverInfo.building?.status === "available" ? "Available" : "Full"}
 					</div>

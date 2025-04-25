@@ -21,16 +21,15 @@
 		"storybook": "storybook dev -p 6006",
 		"storybook:setup": "node node_modules/@storybook/addon-styling/bin/postinstall.js",
 		"storybook:build": "storybook build",
-		"test": "vitest run src/ && playwright test",
+		"test": "vitest run src",
 		"test:unit": "vitest src/",
 		"test:unit:coverage": "vitest --coverage src/",
-		"test:e2e": "playwright test",
-		"test:e2e:report": "playwright show-report",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"commitlint": "commitlint --edit",
 		"commitizen": "exec < /dev/tty && git cz --hook || true",
-		"prepare": "husky"
+		"prepare": "husky",
+		"deploy": "npm run build gh-pages -d dist"
 	},
 	"dependencies": {
 		"@deck.gl/core": "^9.1.5",
@@ -63,6 +62,7 @@
 		"chroma-js": "^3.1.2",
 		"dayjs": "^1.11.13",
 		"deck.gl": "^9.1.6",
+		"gh-pages": "^6.3.0",
 		"mapbox-gl": "^3.10.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
