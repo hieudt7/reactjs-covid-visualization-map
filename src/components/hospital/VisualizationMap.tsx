@@ -10,10 +10,10 @@ import { ScenegraphLayer } from "@deck.gl/mesh-layers";
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import {
+	LocationHome,
+	TelephoneCall,
 	Ambulance,
-	LocationHomeSolid,
-	TelephoneCallSolid,
-	UsersGroupSolid,
+	UsersGroup,
 } from "@mynaui/icons-react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -172,12 +172,12 @@ export const VisualizationMap: React.FC = () => {
 						{hoverInfo.building?.name}
 					</div>
 					<div className="text-sm mb-2 text-dark-green flex items-center gap-2">
-						<LocationHomeSolid className="text-[#F97316]" />
+						<LocationHome />
 						{hoverInfo.building?.address}
 					</div>
 					{hoverInfo.building?.phone && (
 						<div className="text-sm mb-2 text-dark-green flex items-center gap-2">
-							<TelephoneCallSolid className="text-[#66b2f5]" />
+							<TelephoneCall />
 							{hoverInfo.building.phone}
 						</div>
 					)}
@@ -190,7 +190,7 @@ export const VisualizationMap: React.FC = () => {
 						{hoverInfo.building?.status === "available" ? "Available" : "Full"}
 					</div>
 					<div className="text-sm text-dark-green flex items-center gap-2">
-						<UsersGroupSolid className="text-custom-purple" />
+						<UsersGroup />
 						Patient count: {hoverInfo.building?.patients}
 					</div>
 				</div>
