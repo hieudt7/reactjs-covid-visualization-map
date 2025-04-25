@@ -23,46 +23,48 @@ const ProvinceDataTable = () => {
 				</span>
 			</div>
 			<div className="overflow-y-auto h-[70vh]">
-				<table className="w-full text-sm">
-					<thead>
-						<tr className="border-b border-green-100/30">
-							<th className="text-left py-2 px-2 font-medium text-[#28667e]">
-								#
-							</th>
-							<th className="text-left py-2 px-2 font-medium text-[#28667e]">
-								City
-							</th>
-							<th className="text-right py-2 px-2 font-medium text-[#28667e]">
-								Cases
-							</th>
-							<th className="text-right py-2 px-2 font-medium text-[#792884]">
-								Deaths
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						{provincesWithData.map((province, index) => (
-							<tr
-								key={`${province.name}-${index}`}
-								className="border-b border-green-50/30 hover:bg-green-50/20 transition-colors cursor-pointer hover:bg-[#28667e21]"
-								onClick={() =>
-									setCameraPosition({ activeMesh: normalText(province.name) })
-								}
-							>
-								<td className="py-2 px-2 text-[#28667e]">{index + 1}</td>
-								<td className="py-2 px-2 font-medium text-[#28667e]">
-									{formatProvinceName(province.name)}
-								</td>
-								<td className="py-2 px-2 text-right font-medium text-[#28667e]">
-									{province.cases.toLocaleString()}
-								</td>
-								<td className="py-2 px-2 text-right text-[#792884]">
-									{province.deaths.toLocaleString()}
-								</td>
+				<div className="top-cities-table">
+					<table className="w-full text-sm">
+						<thead>
+							<tr className="table-chart-content border-b border-green-50/30 hover:bg-green-50/20 transition-colors cursor-pointer">
+								<th className="text-left py-2 px-2 font-medium text-[#28667e]">
+									#
+								</th>
+								<th className="text-left py-2 px-2 font-medium text-[#28667e]">
+									City
+								</th>
+								<th className="text-right py-2 px-2 font-medium text-[#28667e]">
+									Cases
+								</th>
+								<th className="text-right py-2 px-2 font-medium text-[#792884]">
+									Deaths
+								</th>
 							</tr>
-						))}
-					</tbody>
-				</table>
+						</thead>
+						<tbody>
+							{provincesWithData.map((province, index) => (
+								<tr
+									key={`${province.name}-${index}`}
+									className="table-chart-content border-b border-green-50/30 transition-colors cursor-pointer"
+									onClick={() =>
+										setCameraPosition({ activeMesh: normalText(province.name) })
+									}
+								>
+									<td className="py-2 px-2 text-[#28667e]">{index + 1}</td>
+									<td className="py-2 px-2 font-medium text-[#28667e]">
+										{formatProvinceName(province.name)}
+									</td>
+									<td className="py-2 px-2 text-right font-medium text-[#28667e]">
+										{province.cases.toLocaleString()}
+									</td>
+									<td className="py-2 px-2 text-right text-[#792884]">
+										{province.deaths.toLocaleString()}
+									</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
 			</div>
 			<div className="mt-3 text-xs text-[#28667e] text-right">
 				* Data source: Ministry of Health
