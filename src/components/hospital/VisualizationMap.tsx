@@ -10,9 +10,9 @@ import { ScenegraphLayer } from "@deck.gl/mesh-layers";
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import {
+	Ambulance,
 	LocationHome,
 	TelephoneCall,
-	Ambulance,
 	UsersGroup,
 } from "@mynaui/icons-react";
 import mapboxgl from "mapbox-gl";
@@ -112,7 +112,7 @@ export const VisualizationMap: React.FC = () => {
 						marker: false,
 						flyTo: {
 							zoom: 16,
-							speed: 1.2,
+							speed: 3,
 							curve: 1,
 							easing: (t: number) => t,
 						},

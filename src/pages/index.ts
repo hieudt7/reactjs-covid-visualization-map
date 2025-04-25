@@ -1,6 +1,4 @@
-import { lazy } from "react";
-
-const Home = lazy(() => import("@/pages/home"));
-const Dashboard = lazy(() => import("@/pages/dashboard"));
+import Dashboard from "@/pages/dashboard";
+import Home from "@/pages/home";
 
 export { Dashboard, Home };
