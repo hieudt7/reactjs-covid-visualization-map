@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { Outlet } from "react-router-dom";
 
+import Preloaders from "@/components/Preloaders";
 import fallbackRender from "./error-boundary/fallbackRender";
 import FooterComponent from "./footer";
 import HeaderComponent from "./header";
@@ -16,7 +17,7 @@ const LayoutComponent = () => {
 					<Suspense
 						fallback={
 							<div className="w-full h-full flex justify-center items-center">
-								<span>Loading...</span>
+								<Preloaders />
 							</div>
 						}
 					>

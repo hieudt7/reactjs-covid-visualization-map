@@ -1,17 +1,18 @@
-import { Suspense } from 'react';
+import { Suspense } from "react";
 
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 
-import RenderRouter from './render-router';
+import Preloaders from "@/components/Preloaders";
+import RenderRouter from "./render-router";
 
 const Routes = () => {
-  return (
-    <Suspense fallback="loading...">
-      <BrowserRouter>
-        <RenderRouter />
-      </BrowserRouter>
-    </Suspense>
-  );
+	return (
+		<Suspense fallback={<Preloaders />}>
+			<BrowserRouter>
+				<RenderRouter />
+			</BrowserRouter>
+		</Suspense>
+	);
 };
 
 export default Routes;

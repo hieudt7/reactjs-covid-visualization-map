@@ -9,6 +9,12 @@ import { MapboxOverlay as DeckOverlay } from "@deck.gl/mapbox";
 import { ScenegraphLayer } from "@deck.gl/mesh-layers";
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
+import {
+	Ambulance,
+	LocationHomeSolid,
+	TelephoneCallSolid,
+	UsersGroupSolid,
+} from "@mynaui/icons-react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useState } from "react";
@@ -18,7 +24,6 @@ import {
 	NavigationControl,
 	useControl,
 } from "react-map-gl";
-import { LocationSelected, Telephone, User, Ambulance } from "@mynaui/icons-react";
 
 const INITIAL_VIEW_STATE = {
 	longitude: 105.8419,
@@ -113,6 +118,36 @@ export const VisualizationMap: React.FC = () => {
 						},
 					});
 					map.addControl(geocoder, "top-left");
+					map.addLayer({
+						id: "3d-buildings",
+						source: "composite",
+						"source-layer": "building",
+						filter: ["==", "extrude", "true"],
+						type: "fill-extrusion",
+						minzoom: 15,
+						paint: {
+							"fill-extrusion-color": "#aaa",
+							"fill-extrusion-height": [
+								"interpolate",
+								["linear"],
+								["zoom"],
+								15,
+								0,
+								15.05,
+								["get", "height"],
+							],
+							"fill-extrusion-base": [
+								"interpolate",
+								["linear"],
+								["zoom"],
+								15,
+								0,
+								15.05,
+								["get", "min_height"],
+							],
+							"fill-extrusion-opacity": 0.6,
+						},
+					});
 				}}
 			>
 				<DeckGLOverlay
@@ -137,12 +172,12 @@ export const VisualizationMap: React.FC = () => {
 						{hoverInfo.building?.name}
 					</div>
 					<div className="text-sm mb-2 text-dark-green flex items-center gap-2">
-						<span className="text-base"><LocationSelected /></span>
+						<LocationHomeSolid className="text-[#F97316]" />
 						{hoverInfo.building?.address}
 					</div>
 					{hoverInfo.building?.phone && (
 						<div className="text-sm mb-2 text-dark-green flex items-center gap-2">
-							<span className="text-base"><Telephone /></span>
+							<TelephoneCallSolid className="text-[#66b2f5]" />
 							{hoverInfo.building.phone}
 						</div>
 					)}
@@ -150,12 +185,12 @@ export const VisualizationMap: React.FC = () => {
 						className={`text-sm mb-2 font-semibold flex items-center gap-2 
                         ${hoverInfo.building?.status === "available" ? "text-green-600" : "text-red-600"}`}
 					>
-						<span className="text-base"><Ambulance /></span>
+						<Ambulance />
 						Status:{" "}
 						{hoverInfo.building?.status === "available" ? "Available" : "Full"}
 					</div>
 					<div className="text-sm text-dark-green flex items-center gap-2">
-						<span className="text-base"><User /></span>
+						<UsersGroupSolid className="text-custom-purple" />
 						Patient count: {hoverInfo.building?.patients}
 					</div>
 				</div>
