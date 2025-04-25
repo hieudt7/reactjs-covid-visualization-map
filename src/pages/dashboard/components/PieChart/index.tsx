@@ -46,35 +46,35 @@ const PieChart: React.FC = () => {
 					<directionalLight position={[5, 5, 5]} intensity={1.5} castShadow />
 
 					<group rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-						{/* First Dose segment - Mint Green (35%) */}
+						{/* First Dose segment - Yellow (35%) */}
 						<PieSlice
 							startAngle={baseAngle}
 							endAngle={firstDoseEnd}
 							radius={1.5}
 							height={0.35}
-							color="mediumseagreen"
+							color="gold"
 							midAngle={firstDoseMidAngle}
 							percentage={firstDoseProportion * 100}
 						/>
 
-						{/* Second Dose segment - Purple (45%) */}
+						{/* Second Dose segment -  Mint Green (45%) */}
 						<PieSlice
 							startAngle={firstDoseEnd}
 							endAngle={secondDoseEnd}
 							radius={1.5}
 							height={0.45}
-							color="mediumpurple"
+							color="mediumseagreen"
 							midAngle={secondDoseMidAngle}
 							percentage={secondDoseProportion * 100}
 						/>
 
-						{/* No Dose segment - Yellow (20%) */}
+						{/* No Dose segment - Yellow Purple(20%) */}
 						<PieSlice
 							startAngle={secondDoseEnd}
 							endAngle={baseAngle + TWO_PI}
 							radius={1.5}
 							height={0.2}
-							color="gold"
+							color="mediumpurple"
 							midAngle={noDoseMidAngle}
 							percentage={noDoseProportion * 100}
 						/>

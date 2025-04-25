@@ -32,19 +32,19 @@ const PieChartLegend: React.FC<PieChartLegendProps> = ({
 	return (
 		<div className="flex gap-8 p-4 bg-white rounded-lg shadow-sm absolute bottom-10">
 			<LegendItem
-				color="mediumseagreen"
+				color="mediumpurple"
+				label="No doses"
+				percentage={noDoseProportion * 100}
+			/>
+			<LegendItem
+				color="gold"
 				label="1 dose"
 				percentage={firstDoseProportion * 100}
 			/>
 			<LegendItem
-				color="mediumpurple"
+				color="mediumseagreen"
 				label="2 doses"
 				percentage={secondDoseProportion * 100}
-			/>
-			<LegendItem
-				color="gold"
-				label="No doses"
-				percentage={noDoseProportion * 100}
 			/>
 		</div>
 	);
